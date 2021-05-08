@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="harcama"
+            type="com.sbaltinsoy.gdg_bitirmeproje.veritabani.HarcamaDurum" />
+        <variable
+            name="tiklamaTakibi"
+            type="com.sbaltinsoy.gdg_bitirmeproje.harcamaDurumTakip.TiklamaTakipcisi" />
+        <variable
+            name="dovizKuru"
+            type="com.sbaltinsoy.gdg_bitirmeproje.servis.Para" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="@{() -> tiklamaTakibi.tiklandi(harcama)}">
+            <ImageView
+                android:id="@+id/duygu_resim"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="16dp"
+                app:harcamaIcon="@{harcama}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/home" />
+
+
+            <TextView
+                android:id="@+id/textHarcamaTur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/textColor"
+                android:textSize="15sp"
+                app:harcamaTuru = "@{harcama}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Alisveris"
+                app:layout_constraintVertical_bias="0.525"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textHarcamaTutar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:gravity="right"
+                app:harcamaMiktari="@{harcama}"
+                android:textAllCaps="false"
+                android:textColor="@color/textColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="1500"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.475"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

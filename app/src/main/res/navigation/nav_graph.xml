@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.sbaltinsoy.gdg_bitirmeproje.SplashScreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/splash_screen_fragment" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_harcamaDurumTakipFragment"
+            app:destination="@id/harcamaDurumTakipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaDurumTakipFragment"
+        android:name="com.sbaltinsoy.gdg_bitirmeproje.harcamaDurumTakip.HarcamaDurumTakipFragment"
+        android:label="HarcamaDurumTakipFragment"
+        tools:layout="@layout/harcama_durum_takip_fragment">
+        <action
+            android:id="@+id/action_harcamaDurumTakipFragment_to_harcamaOlusturFragment"
+            app:destination="@id/harcamaOlusturFragment" />
+        <action
+            android:id="@+id/action_harcamaDurumTakipFragment_to_harcamaDetayFragment"
+            app:destination="@id/harcamaDetayFragment" />
+        <action
+            android:id="@+id/action_harcamaDurumTakipFragment_to_isimDetayFragment"
+            app:destination="@id/isimDetayFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaOlusturFragment"
+        android:name="com.sbaltinsoy.gdg_bitirmeproje.harcamaOlustur.HarcamaOlusturFragment"
+        android:label="HarcamaOlusturFragment" >
+        <action
+            android:id="@+id/action_harcamaOlusturFragment_to_harcamaDurumTakipFragment"
+            app:destination="@id/harcamaDurumTakipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaDetayFragment"
+        android:name="com.sbaltinsoy.gdg_bitirmeproje.harcamaDetay.HarcamaDetayFragment"
+        android:label="HarcamaDetayFragment" >
+        <action
+            android:id="@+id/action_harcamaDetayFragment_to_harcamaDurumTakipFragment"
+            app:destination="@id/harcamaDurumTakipFragment" />
+        <argument
+            android:name="harcamaKimlik"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/isimDetayFragment"
+        android:name="com.sbaltinsoy.gdg_bitirmeproje.isimDetay.IsimDetayFragment"
+        android:label="IsimDetayFragment" >
+        <action
+            android:id="@+id/action_isimDetayFragment_to_harcamaDurumTakipFragment"
+            app:destination="@id/harcamaDurumTakipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.sbaltinsoy.gdg_bitirmeproje.onBoarding.Screens.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_harcamaDurumTakipFragment"
+            app:destination="@id/harcamaDurumTakipFragment" />
+    </fragment>
+</navigation>

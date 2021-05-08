@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Harcama Takip Uygulaması</string>
+    <string name="tl">TL</string>
+    <string name="sterlin">STERLIN</string>
+    <string name="euro">EURO</string>
+    <string name="dolar">DOLAR</string>
+    <string name="ekle">EKLE</string>
+    <string name="aciklama">Açıklama</string>
+    <string name="harcama">Harcama</string>
+    <string name="fatura">Fatura</string>
+    <string name="kira">Kira</string>
+    <string name="diger">Diğer</string>
+    <string name="isminizi_giriniz">İsminizi Giriniz</string>
+    <string name="kaydet">kaydet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_screen_text_top">Karşınızda Harcama Takip Uygulaması</string>
+    <string name="first_screen_text_bottom">Artık karışıklığa son !</string>
+    <string name="gec">GEÇ</string>
+    <string name="second_screen_bottom_text">Harcalamalarınızı kategorileyerek daha kolay takip edin !</string>
+    <string name="second_screen_top_text">Kolayca Kategorilendir</string>
+    <string name="harcama_takip_uygulamas">Harcama Takip Uygulaması</string>
+    <string name="third_screen_text_top">Farklı Para Birimkileriyle Takip Et</string>
+    <string name="third_screen_text_bottom">Harcalamalarınız TL Dolar Euro Sterlin para birimleriyle sürekli güncellenen kurla takip edin !</string>
+    <string name="bitir">BİTİR</string>
+    <string name="belirtmek_istemiyorum">Belirtmek istemiyorum</string>
+    <string name="kadin">Kadın</string>
+    <string name="erkek">Erkek</string>
+    <string name="bos_alan_hata">!!! Boş Alan Bırakılamaz !!!</string>
+    <string name="sil">SİL</string>
+</resources>

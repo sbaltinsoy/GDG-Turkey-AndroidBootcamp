@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="harcamaDurumTakipViewModel"
+            type="com.sbaltinsoy.gdg_bitirmeproje.harcamaDurumTakip.HarcamaDurumTakipViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".harcamaDurumTakip.HarcamaDurumTakipFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewHome"
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_background">
+                <TextView
+                    android:layout_marginStart="40dp"
+                    android:id="@+id/textMerhaba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Merhaba"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/textIsim"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <TextView
+                    android:id="@+id/textIsim"
+                    android:layout_marginStart="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Burak Bey"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textMerhaba"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/textHarcama"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="left"
+                    tools:text="Harcamaniz"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@id/textTutar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/textTutar"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="9080 TL"
+                    android:textSize="20sp"
+                    android:gravity="left"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textHarcama"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/tl_buton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="@{() -> harcamaDurumTakipViewModel.tlButonKontrol()}"
+            app:layout_constraintTop_toBottomOf="@id/cardViewHome"
+            style="?attr/materialButtonOutlinedStyle"
+            app:layout_constraintEnd_toStartOf="@id/sterlin_buton"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:textColor="#fece2f"
+            android:layout_marginStart="@dimen/b_margin_start"
+            android:text="@string/tl"/>
+        <Button
+            android:id="@+id/sterlin_buton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> harcamaDurumTakipViewModel.sterlinButonKontrol()}"
+            app:layout_constraintStart_toEndOf="@id/tl_buton"
+            app:layout_constraintTop_toBottomOf="@id/cardViewHome"
+            style="?attr/materialButtonOutlinedStyle"
+            app:layout_constraintEnd_toStartOf="@id/euro_buton"
+            android:layout_marginStart="@dimen/b_margin_start"
+            android:textColor="@color/butonYaziRenk"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:text="@string/sterlin"/>
+        <Button
+            android:id="@+id/euro_buton"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/b_margin_start"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> harcamaDurumTakipViewModel.euroButonKontrol()}"
+            app:layout_constraintStart_toEndOf="@id/sterlin_buton"
+            app:layout_constraintEnd_toStartOf="@id/dolar_buton"
+            app:layout_constraintTop_toBottomOf="@id/cardViewHome"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            style="?attr/materialButtonOutlinedStyle"
+            android:textColor="#fece2f"
+            android:text="@string/euro"/>
+        <Button
+            android:id="@+id/dolar_buton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/b_margin_start"
+            android:onClick="@{() -> harcamaDurumTakipViewModel.dolarButonKontrol()}"
+            app:layout_constraintStart_toEndOf="@id/euro_buton"
+            app:layout_constraintTop_toBottomOf="@id/cardViewHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            style="?attr/materialButtonOutlinedStyle"
+            android:textColor="@color/butonYaziRenk"
+            android:text="@string/dolar"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/harcama_listesi"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/dolar_buton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extended_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/b_margin"
+            android:layout_gravity="bottom|left"
+            android:text="@string/ekle"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/butonYaziRenk"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_plus_24"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
