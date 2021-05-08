@@ -1,4 +1,4 @@
-# GDG-Turkey-AndroidBootcam
+# GDG-Turkey-AndroidBootcamp
 ## Android Bootcamp Bitirme Projesi
 ### Splash Screen
  Projemizde ilk olarak bizi 3 saniye uzunluğunda splash screenimiz karşılamaktadır
