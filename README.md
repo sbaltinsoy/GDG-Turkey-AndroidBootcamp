@@ -29,5 +29,25 @@ Ve projemiz kullanıma hazır.
 2. Code kısmında bulunan download zip diyerek projemizi zip halinde indirebilir
 Daha sonra zipten çıkararak android studio Ortamında projeyi açabilirsiniz.
 
-**Projeyi indirmeden incelemek isterseniz yukarida bulunan
-Ekran Alıntıları Kısmından Projenin Tasarımını inceleyebilirsiniz**
+**Projeyi indirmeden incelemek isterseniz aşapıda bulunan
+Ekran Alıntılarını Projenin Tasarımını inceleyebilirsiniz**
+
+![alt text](https://github.com/sbaltinsoy/Resimler/blob/master/splash.png?raw=true)
+
+
+![alt text](https://github.com/sbaltinsoy/Resimler/blob/master/1.png?raw=true)
+
+
+![alt text](https://github.com/sbaltinsoy/Resimler/blob/master/2.png?raw=true)
+
+
+![alt text](https://github.com/sbaltinsoy/Resimler/blob/master/3.png?raw=true)
+
+
+![alt text](https://github.com/sbaltinsoy/Resimler/blob/master/6.png?raw=true)
+
+
+![alt text](https://github.com/sbaltinsoy/Resimler/blob/master/4.png?raw=true)
+
+
+![alt text](https://github.com/sbaltinsoy/Resimler/blob/master/5.png?raw=true)
